@@ -47,14 +47,14 @@ DiferenciaPorcentual = -38.98.
 
 ## ¿De donde vienen los datos?
 
-Los datos provienen de estas tablas realizadas por SIDUT:
-https://www.sidut.org.ar/images/Documentos/Salarios_2022.pdf
-https://www.sidut.org.ar/images/Documentos/Salarios_2023.pdf
-https://www.sidut.org.ar/images/Documentos/Salarios_2024.pdf
-https://www.sidut.org.ar/images/Documentos/Salarios_2025.pdf
+Los datos de los sueldos provienen de estas tablas realizadas por SIDUT:
+- https://www.sidut.org.ar/images/Documentos/Salarios_2022.pdf
+- https://www.sidut.org.ar/images/Documentos/Salarios_2023.pdf
+- https://www.sidut.org.ar/images/Documentos/Salarios_2024.pdf
+- https://www.sidut.org.ar/images/Documentos/Salarios_2025.pdf
 
-y de este archivo con los datos del IPC:
-https://www.indec.gob.ar/indec/web/Institucional-Indec-calculadora_variaciones_IPC
+y los del ipc los armé a partir de este archivo de la página del INDEC:
+- https://www.indec.gob.ar/indec/web/Institucional-Indec-calculadora_variaciones_IPC
 
 ## ¿Cómo extiendo esto?
 
