@@ -12,13 +12,13 @@ cargar_salarios_de_csv(RutaAlArchivo, Anio):-
 				Fila,
 				salario(Cargo, Fecha, Salario))),
 		assert_if_new(salario(Cargo, Fecha, Salario))). 
-        % assert_if_new agrega una clausula a un predicado, en este caso, agrega una clausula al predicado salario\3
+        % assert_if_new agrega una cláusula a un predicado, en este caso, agrega una cláusula al predicado salario/3
 
 salario_en_fila(Anio, Encabezado, Fila, salario(cargo(Dedicacion, Categoria), fecha(Anio, NumeroDeMes), Salario)):-
 	Encabezado =.. [row, _, _|NombresDeMes],
 	% =.. liga un functor con una lista
 	% por ej: row('CATEGORIA', 'DEDICACION', 'ENERO', 'FEBRERO') =.. Lista
-	% liga LISTA A
+	% liga Lista a
 	% [row, 'CATEGORIA', 'DEDICACION', 'ENERO', 'FEBRERO']
 	Fila =.. [row, Dedicacion, CategoriaComoString|SalariosPorMes],
 	string_a_categoria(CategoriaComoString, Categoria),
@@ -29,7 +29,7 @@ salario_en_fila(Anio, Encabezado, Fila, salario(cargo(Dedicacion, Categoria), fe
 string_a_categoria('Titular', titular).
 string_a_categoria('Asociado', asociado).
 string_a_categoria('Adjunto', adjunto).
-string_a_categoria('ATP', atp).
+string_a_categoria('JTP', jtp).
 string_a_categoria('Ayudante de 1era', ayudante_1era).
 string_a_categoria('Ayudante de 2da', ayudante_2da).
 
@@ -48,7 +48,7 @@ assert_if_new(Term):-
 	not(current_predicate(Name/Arity)),
 	% current_predicate chequea si un cierto predicado existe.
 	assertz(Term).
-	% assertz agrega un functor como una clausula de un predicado
+	% assertz agrega un functor como una cláusula de un predicado
 assert_if_new(Term):-
     ignore((
 		% ignore realiza una consulta, y siempre es true sin importar el valor de verdad de la consulta.

@@ -34,7 +34,7 @@ ayuda:-
 cargo(Cargo):-
 	distinct(Cargo, salario(Cargo, _, _)).
 
-% Se calcula cual debería ser el valor ajustado haciendo esta cuenta:
+% Se calcula cuál debería ser el valor ajustado haciendo esta cuenta:
 % (salario en fecha inicial) / (ipc en fecha inicial) * (ipc en fecha final)
 salario_ajustado_por_ipc(Cargo, FechaInicial, FechaFinal, SalarioInicial, SalarioAjustado):-
 	distinct(salario(Cargo, FechaInicial, SalarioInicial)),
